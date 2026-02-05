@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, Sparkles, User } from "lucide-react";
+import { Heart, MapPin, Sparkles, User } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -47,6 +47,17 @@ const AboutSection = () => {
             com carinho, confiança e atendimento personalizado. Meu compromisso é proporcionar uma 
             experiência única de compra!
           </motion.p>
+
+          <motion.div
+            className="flex items-center justify-center gap-2 mb-8 text-muted-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+          >
+            <MapPin className="w-5 h-5 text-primary" />
+            <span className="text-sm font-medium">Porto Velho, Rondônia e proximidades</span>
+          </motion.div>
 
           {/* Decorative icons */}
           <motion.div
